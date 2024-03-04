@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\PhysProbListController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,3 +17,6 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/allview', [PhysProbListController::class, 'index']
+)->name('phys_prob_lists.index');
